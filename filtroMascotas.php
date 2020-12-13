@@ -6,6 +6,10 @@
 </head>
 
 <body>
+
+    <div>
+        <h1 class="text-center">Búsqueda de mascotas por tipo</h1>
+    </div>
     <form action="<?php $_PHP_SELF ?>" method="GET">
 
         <div>
@@ -27,7 +31,10 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Nombre</th>
+                <th scope="col">Dueño</th>
+                <th scope="col">Telefono</th>
+                <th scope="col">Dirección</th>
+                <th scope="col">Nombre de la mascota</th>
                 <th scope="col">Edad</th>
                 <th scope="col">Tipo de mascota</th>
             </tr>
@@ -36,57 +43,29 @@
 
             <?php
             require_once 'dbconexion.php';
-        //     if (empty($_GET["tipoMascota"])) {
-        //         echo "ghjkhgfdfghj" . $_GET["tipoMascota"] . "\n";
-        //         $query = "SELECT * from Mascota";
-        //         echo $query;
-        //         $stmt = $conn->prepare($query);
-        //         $stmt->execute();
-        //         $fila = $stmt->fetchAll(PDO::FETCH_OBJ);
-        //         foreach ($fila as $registro) {
+            
+            if (strcmp($_GET["tipoMascota"], "todos") === 0 || strcmp($_GET["tipoMascota"], NULL)===0) {
 
-        //             echo "<tr>";
-        //             echo "<th scope='row'>" . $registro->id . "</th>";
-        //             echo "<td>" . $registro->nombre . "</td>";
-        //             echo "<td>" . $registro->edad . "</td>";
-        //             echo "<td>" . $registro->tipo_mascota . "</td>";
-        //             echo "</tr>";
-        //         }
-        //         // foreach ($conn->query('SELECT * from Mascota') as $fila) {
-        //         //     print_r($fila);
-        //         // }
-
-
-        //         exit();
-        //     }
-
-        //    else
-        if (strcmp($_GET["tipoMascota"], "todos") === 0) {
-
-                $query = "SELECT * from Mascota";
-                echo $query;
+                $query = "SELECT * from Adopcion";
+                //echo $query;
                 $stmt = $conn->prepare($query);
                 $stmt->execute();
                 $fila = $stmt->fetchAll(PDO::FETCH_OBJ);
                 foreach ($fila as $registro) {
-
                     echo "<tr>";
                     echo "<th scope='row'>" . $registro->id . "</th>";
-                    echo "<td>" . $registro->nombre . "</td>";
+                    echo "<td>" . $registro->dueno . "</td>";
+                    echo "<td>" . $registro->telefono . "</td>";
+                    echo "<td>" . $registro->direccion . "</td>";
+                    echo "<td>" . $registro->nombre_mascota . "</td>";
                     echo "<td>" . $registro->edad . "</td>";
                     echo "<td>" . $registro->tipo_mascota . "</td>";
                     echo "</tr>";
                 }
-                // foreach ($conn->query('SELECT * from Mascota') as $fila) {
-                //     print_r($fila);
-                // }
-
-
                 exit();
             } else {
-                $query = "SELECT * from Mascota WHERE tipo_mascota='" . $_GET['tipoMascota'] . "'";
-                echo $query;
-
+                $query = "SELECT * from Adopcion WHERE tipo_mascota='" . $_GET['tipoMascota'] . "'";
+                //echo $query;
                 $stmt = $conn->prepare($query);
                 $stmt->execute();
                 $fila = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -94,16 +73,14 @@
 
                     echo "<tr>";
                     echo "<th scope='row'>" . $registro->id . "</th>";
-                    echo "<td>" . $registro->nombre . "</td>";
+                    echo "<td>" . $registro->dueno . "</td>";
+                    echo "<td>" . $registro->telefono . "</td>";
+                    echo "<td>" . $registro->direccion . "</td>";
+                    echo "<td>" . $registro->nombre_mascota . "</td>";
                     echo "<td>" . $registro->edad . "</td>";
                     echo "<td>" . $registro->tipo_mascota . "</td>";
                     echo "</tr>";
                 }
-                // foreach ($conn->query('SELECT * from Mascota') as $fila) {
-                //     print_r($fila);
-                // }
-
-
                 exit();
             }
             ?>

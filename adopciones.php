@@ -31,7 +31,7 @@
                         <label class="col-sm-2 col-form-label">Teléfono </label>
                         <div class="col">
 
-                           <input type="text" name="telefono" class="form-control" />
+                           <input type="text" name="telefono" placeholder="Ingrese su número de teléfono o convencional" class="form-control" />
                         </div>
                      </div>
                   </div>
@@ -40,7 +40,7 @@
 
                         <label class="col-sm-2 col-form-label">Dirección </label>
                         <div class="col">
-                           <input type="text" name="direccion" class="form-control" />
+                           <input type="text" name="direccion" class="form-control" placeholder="Ingrese su dirección domiciliaria" />
                         </div>
                      </div>
                   </div>
@@ -59,32 +59,32 @@
                         </div>
                      </div>
                   </div>
-                  
+
                   <div class="form-group col-md-5 col-xl-5">
-                        <label class="col-sm col-form-label"> Seleccione el tipo de su mascota:</label>
-                        <div class="col">
-                           <div class="custom-control custom-radio">
+                     <label class="col-sm col-form-label"> Seleccione el tipo de su mascota:</label>
+                     <div class="col">
+                        <div class="custom-control custom-radio">
 
-                              <input type="radio" id="perro" name="tipoMascota" value="perro" class="custom-control-input">
-                              <label for="perro">Perro</label>
-                           </div>
-                           <div class="custom-control custom-radio">
+                           <input type="radio" id="perro" name="tipoMascota" value="perro" class="custom-control-input">
+                           <label for="perro">Perro</label>
+                        </div>
+                        <div class="custom-control custom-radio">
 
-                              <input type="radio" id="gato" name="tipoMascota" value="gato" class="custom-control-input">
-                              <label for="gato">Gato</label>
-                           </div>
-                           <div class="custom-control custom-radio">
+                           <input type="radio" id="gato" name="tipoMascota" value="gato" class="custom-control-input">
+                           <label for="gato">Gato</label>
+                        </div>
+                        <div class="custom-control custom-radio">
 
-                              <input type="radio" id="loro" name="tipoMascota" value="loro">
-                              <label for="loro">Loro</label>
-                           </div>
-                           <div class="custom-control custom-radio">
+                           <input type="radio" id="loro" name="tipoMascota" value="loro">
+                           <label for="loro">Loro</label>
+                        </div>
+                        <div class="custom-control custom-radio">
 
-                              <input type="radio" id="hamster" name="tipoMascota" value="hamster">
-                              <label for="hamster">Hamster</label>
-                           </div>
+                           <input type="radio" id="hamster" name="tipoMascota" value="hamster">
+                           <label for="hamster">Hamster</label>
                         </div>
                      </div>
+                  </div>
 
                   <div class="col text-center">
                      <input type="submit" value="Registrar Mascota" class="btn btn-success" />
@@ -129,7 +129,7 @@ if (!empty($_POST["dueno"]) && !empty($_POST["telefono"]) && !empty($_POST["dire
    $stmt->bindParam(5, $mascota);
    $stmt->bindParam(6, $edad);
    $stmt->bindParam(7, $tipo);
-   $stmt->execute();
+   echo $stmt->execute();
 
    $modal = "<div class='modal fade' role='dialog'>
    <div class='modal-dialog'>
