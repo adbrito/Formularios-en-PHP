@@ -4,8 +4,14 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Registro</title>
+   <title>Adopciones</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+   <style>
+      .container {
+         padding: 20px;
+      }
+   </style>
 </head>
 
 <body>
@@ -15,7 +21,7 @@
             <div class="col-sm-8 align-self-center">
 
                <div>
-                  <h1 class="text-center">Registro de mascotas</h1>
+                  <h1 class="text-center">Registro de mascotas<i style='font-size:24px' class='fas'>&#xf1b0;</i></h1>
                </div>
                <form action="<?php $_PHP_SELF ?>" method="POST">
                   <div class="row">
@@ -49,13 +55,13 @@
                         <label class="col-sm-2 col-form-label">Edad </label>
                         <div class="col">
 
-                           <input type="text" name="edad" class="form-control" />
+                           <input type="text" name="edad" class="form-control" placeholder="Ingrese la edad" />
                         </div>
                      </div>
                      <div class="form-group col-md-5 col-xl-6">
                         <label class="col-sm-2 col-form-label">Mascota </label>
                         <div class="col">
-                           <input type="text" name="mascota" class="form-control" placeholder="Ingresa el nombre de tu mascota" />
+                           <input type="text" name="mascota" class="form-control" placeholder="Ingrese el nombre de su mascota" />
                         </div>
                      </div>
                   </div>
@@ -102,10 +108,11 @@
 
 <?php
 require_once 'dbconexion.php';
+
 if (!empty($_POST["dueno"]) && !empty($_POST["telefono"]) && !empty($_POST["direccion"]) && !empty($_POST["mascota"]) && !empty($_POST["tipoMascota"]) && !empty($_POST["edad"])) {
    if (!preg_match("/[^\w+$]/", $_POST["dueno"])) {
       echo $_POST["dueno"];
-      die("invalid name and name should be alpha");
+      die("Nombre invalido, debe contener nombre y apellido");
    }
    $nombre = $_POST["dueno"];
    $tel = $_POST["telefono"];
@@ -130,27 +137,13 @@ if (!empty($_POST["dueno"]) && !empty($_POST["telefono"]) && !empty($_POST["dire
    $stmt->bindParam(6, $edad);
    $stmt->bindParam(7, $tipo);
    echo $stmt->execute();
-
-   $modal = "<div class='modal fade' role='dialog'>
-   <div class='modal-dialog'>
- 
-     <!-- Modal content-->
-     <div class='modal-content'>
-       <div class='modal-header'>
-         <button type='button' class='close' data-dismiss='modal'>&times;</button>
-         <h4 class='modal-title'>Modal Header</h4>
-       </div>
-       <div class='modal-body'>
-         <p>Some text in the modal.</p>
-       </div>
-       <div class='modal-footer'>
-         <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
-       </div>
-     </div>
- 
-   </div>
- </div>";
-   echo $modal;
+   $confirmacion = "<div class='container'>
+   <div class='center container h-100'>
+         <div class='row justify-content-center h-100'>
+            <div class='col-sm-8 align-self-center'>
+      <h1>Registro exitoso!</h1>
+   </div></div></div></div>";
+   echo $confirmacion;
 
    exit();
 }
