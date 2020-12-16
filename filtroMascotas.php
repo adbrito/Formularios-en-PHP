@@ -54,7 +54,7 @@
                             <?php
                             require_once 'dbconexion.php';
 
-                            if (strcmp($_GET["tipoMascota"], "todos") === 0 || strcmp($_GET["tipoMascota"], NULL) === 0) {
+                            if (empty($_GET["tipoMascota"]) || strcmp($_GET["tipoMascota"], "todos") === 0) {
 
                                 $query = "SELECT * from Adopcion";
                                 //echo $query;
