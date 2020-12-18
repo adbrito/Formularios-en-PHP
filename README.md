@@ -9,19 +9,19 @@ Deberá crear adicionalmente ***mascotas.php*** para visualizar un listado (tabl
 ![image](https://github.com/adbrito/PracticaPHP/blob/main/adopciones.PNG)
 
 ### Visualización de mascotas registradas en la base de datos
-https://github.com/adbrito/PracticaPHP/main/mascotas.PNG
+https://github.com/adbrito/PracticaPHP/blob/main/mascotas.PNG
 
 ### Búsqueda de mascotas por filtro *Tipo de mascota*
-https://github.com/adbrito/PracticaPHP/main/filtrado.PNG
-https://github.com/adbrito/PracticaPHP/main/filtrado1.PNG
-https://github.com/adbrito/PracticaPHP/main/filtrado2.PNG
-https://github.com/adbrito/PracticaPHP/main/filtrado3.PNG
+https://github.com/adbrito/PracticaPHP/blob/main/filtrado.PNG
+https://github.com/adbrito/PracticaPHP/blob/main/filtrado1.PNG
+https://github.com/adbrito/PracticaPHP/blob/main/filtrado2.PNG
+https://github.com/adbrito/PracticaPHP/blob/main/filtrado3.PNG
 
 
 ### Datos almacenados en la base de datos
 Se usó remotemysql para almacenar los datos
 
-(https://github.com/adbrito/PracticaPHP/main/bd.PNG)
+(https://github.com/adbrito/PracticaPHP/blob/main/bd.PNG)
 
 
 
