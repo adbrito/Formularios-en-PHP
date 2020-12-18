@@ -6,22 +6,22 @@ Deberá ***crear una base de datos con al menos una tabla*** donde se pueda guar
 Deberá crear adicionalmente ***mascotas.php*** para visualizar un listado (tabla html) de todas las mascotas registradas y otro archivo ***filtroMascotas.php*** que recibe a través de un método ***get*** el tipo de mascota y permite visualizar un listado filtrado de mascotas.
 
 ### Registro de mascotas
-https://github.com/adbrito/PracticaPHP.git/main/adopciones.PNG
+![image](https://github.com/adbrito/PracticaPHP/blob/main/adopciones.PNG)
 
 ### Visualización de mascotas registradas en la base de datos
-https://github.com/adbrito/PracticaPHP.git/main/mascotas.PNG
+![imagen](https://github.com/adbrito/PracticaPHP/blob/main/mascotas.PNG)
 
 ### Búsqueda de mascotas por filtro *Tipo de mascota*
-https://github.com/adbrito/PracticaPHP.git/main/filtrado.PNG
-https://github.com/adbrito/PracticaPHP.git/main/filtrado1.PNG
-https://github.com/adbrito/PracticaPHP.git/main/filtrado2.PNG
-https://github.com/adbrito/PracticaPHP.git/main/filtrado3.PNG
+![imagen](https://github.com/adbrito/PracticaPHP/blob/main/filtrado.PNG)
+![imagen](https://github.com/adbrito/PracticaPHP/blob/main/filtrado1.PNG)
+![imagen](https://github.com/adbrito/PracticaPHP/blob/main/filtrado2.PNG)
+![imagen](https://github.com/adbrito/PracticaPHP/blob/main/filtrado3.PNG)
 
 
 ### Datos almacenados en la base de datos
 Se usó remotemysql para almacenar los datos
 
-https://github.com/adbrito/PracticaPHP.git/main/bd.PNG
+![imagen](https://github.com/adbrito/PracticaPHP/blob/main/bd.PNG)
 
 
 
