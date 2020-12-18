@@ -21,7 +21,7 @@ https://github.com/adbrito/PracticaPHP.git/main/filtrado3.PNG
 ### Datos almacenados en la base de datos
 Se usó remotemysql para almacenar los datos
 
-https://github.com/adbrito/PracticaPHP.git/main/bd.PNG
+(https://github.com/adbrito/PracticaPHP.git/main/bd.PNG)
 
 
 
