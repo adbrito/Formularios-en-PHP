@@ -6,7 +6,7 @@ Deberá ***crear una base de datos con al menos una tabla*** donde se pueda guar
 Deberá crear adicionalmente ***mascotas.php*** para visualizar un listado (tabla html) de todas las mascotas registradas y otro archivo ***filtroMascotas.php*** que recibe a través de un método ***get*** el tipo de mascota y permite visualizar un listado filtrado de mascotas.
 
 ### Registro de mascotas
-![image](https://github.com/adbrito/PracticaPHP#practicaPHP/main/adopciones.PNG)
+![image](https://github.com/adbrito/PracticaPHP/blob/main/adopciones.PNG)
 
 ### Visualización de mascotas registradas en la base de datos
 https://github.com/adbrito/PracticaPHP/main/mascotas.PNG
